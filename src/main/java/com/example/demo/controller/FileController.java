@@ -42,7 +42,8 @@ public class FileController {
 			byte[] bytes = uploadedFile.getBytes();
 
 			UUID uuid = UUID.randomUUID();
-			String uploadsLocation = env.getProperty("resource.uploads");
+//			String uploadsLocation = env.getProperty("resource.uploads");
+			String uploadsLocation = "/home/edexadm/workspace/edexspace/demo2/src/main/resources/uploads/";
 			String fileLocation = uploadsLocation + uuid + uploadedFile.getOriginalFilename();
 			Path path = Paths.get(fileLocation);
 			Files.write(path, bytes);
